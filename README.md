@@ -3,7 +3,7 @@
 </p>
 <div align="center">   
 
-  # SimRW: Dataset of Simulated and Real-World Scenarios for Evaluate Autonomous Driving 
+  # S2R-Bench: A Sim-to-real Evaluation Benchmark for Autonomous Driving 
 </div> 
 
 <div align="justify">  
