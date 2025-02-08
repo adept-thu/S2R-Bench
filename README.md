@@ -249,9 +249,237 @@ python demo.py --cfg_file ${CONFIG_FILE} \
 ```
 
 # 8. Model Zoo
-<div align=center>
-<p align="center"><font face="Helvetica" size=3.><b>We will release the model soon.</b></font></p>
-</div>
+
+<table>
+
+<tr>
+
+<th>Model</th>
+
+<th>Train Type</th>
+
+<th>Data Type</th>
+
+<th>ckpt</th>
+
+</tr>
+
+<tr>
+
+<td></td>
+
+<td>S2R-C</td>
+
+<td>LiDAR</td>
+
+<td><a href="https://pan.baidu.com/s/1pp8my4LgC_sTQydGu2xyAw?pwd=8888">link</a></td>
+
+</tr>
+
+<tr>
+
+<td></td>
+
+<td>S2R-C</td>
+
+<td>Arbe</td>
+
+<td><a href="https://pan.baidu.com/s/1pp8my4LgC_sTQydGu2xyAw?pwd=8888">link</a></td>
+
+</tr>
+
+<tr>
+
+<td></td>
+
+<td>S2R-C</td>
+
+<td>ARS548</td>
+
+<td><a href="https://pan.baidu.com/s/1pp8my4LgC_sTQydGu2xyAw?pwd=8888">link</a></td>
+
+</tr>
+
+<tr>
+
+<td></td>
+
+<td>S2R-S</td>
+
+<td>LiDAR</td>
+
+<td><a href="https://pan.baidu.com/s/1pp8my4LgC_sTQydGu2xyAw?pwd=8888">link</a></td>
+
+</tr>
+
+<tr>
+
+<td>PointPillar</td>
+
+<td>S2R-S</td>
+
+<td>Arbe</td>
+
+<td><a href="https://pan.baidu.com/s/1pp8my4LgC_sTQydGu2xyAw?pwd=8888">link</a></td>
+
+</tr>
+
+<tr>
+
+<td></td>
+
+<td>S2R-S</td>
+
+<td>ARS548</td>
+
+<td><a href="https://pan.baidu.com/s/1pp8my4LgC_sTQydGu2xyAw?pwd=8888">link</a></td>
+
+</tr>
+
+<tr>
+
+<td></td>
+
+<td>S2R-R</td>
+
+<td>LiDAR</td>
+
+<td><a href="https://pan.baidu.com/s/1pp8my4LgC_sTQydGu2xyAw?pwd=8888">link</a></td>
+
+</tr>
+
+<tr>
+
+<td></td>
+
+<td>S2R-R</td>
+
+<td>Arbe</td>
+
+<td><a href="https://pan.baidu.com/s/1pp8my4LgC_sTQydGu2xyAw?pwd=8888">link</a></td>
+
+</tr>
+
+<tr>
+
+<td></td>
+
+<td>S2R-R</td>
+
+<td>ARS548</td>
+
+<td><a href="https://pan.baidu.com/s/1pp8my4LgC_sTQydGu2xyAw?pwd=8888">link</a></td>
+
+</tr>
+<tr>
+
+<td></td>
+
+<td>S2R-C</td>
+
+<td>LiDAR</td>
+
+<td><a href="https://pan.baidu.com/s/1pp8my4LgC_sTQydGu2xyAw?pwd=8888">link</a></td>
+
+</tr>
+
+<tr>
+
+<td></td>
+
+<td>S2R-C</td>
+
+<td>Arbe</td>
+
+<td><a href="https://pan.baidu.com/s/1pp8my4LgC_sTQydGu2xyAw?pwd=8888">link</a></td>
+
+</tr>
+
+<tr>
+
+<td></td>
+
+<td>S2R-C</td>
+
+<td>ARS548</td>
+
+<td><a href="https://pan.baidu.com/s/1pp8my4LgC_sTQydGu2xyAw?pwd=8888">link</a></td>
+
+</tr>
+
+<tr>
+
+<td></td>
+
+<td>S2R-S</td>
+
+<td>LiDAR</td>
+
+<td><a href="https://pan.baidu.com/s/1pp8my4LgC_sTQydGu2xyAw?pwd=8888">link</a></td>
+
+</tr>
+
+<tr>
+
+<td>Focals-Conv</td>
+
+<td>S2R-S</td>
+
+<td>Arbe</td>
+
+<td><a href="https://pan.baidu.com/s/1pp8my4LgC_sTQydGu2xyAw?pwd=8888">link</a></td>
+
+</tr>
+
+<tr>
+
+<td></td>
+
+<td>S2R-S</td>
+
+<td>ARS548</td>
+
+<td><a href="https://pan.baidu.com/s/1pp8my4LgC_sTQydGu2xyAw?pwd=8888">link</a></td>
+
+</tr>
+
+<tr>
+
+<td></td>
+
+<td>S2R-R</td>
+
+<td>LiDAR</td>
+
+<td><a href="https://pan.baidu.com/s/1pp8my4LgC_sTQydGu2xyAw?pwd=8888">link</a></td>
+
+</tr>
+
+<tr>
+
+<td></td>
+
+<td>S2R-R</td>
+
+<td>Arbe</td>
+
+<td><a href="https://pan.baidu.com/s/1pp8my4LgC_sTQydGu2xyAw?pwd=8888">link</a></td>
+
+</tr>
+
+<tr>
+
+<td></td>
+
+<td>S2R-R</td>
+
+<td>ARS548</td>
+
+<td><a href="https://pan.baidu.com/s/1pp8my4LgC_sTQydGu2xyAw?pwd=8888">link</a></td>
+
+</tr>
+
+</table>
 
 # 9. Acknowledgement
 * Thanks for the sensor support provided by Beijing Jingwei Hirain Technologies Co., Inc.
