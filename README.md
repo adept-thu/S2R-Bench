@@ -8,7 +8,7 @@
 
 <div align="justify">  
 
-This is the official repository of [**SimRW**](https://arxiv.org/abs/2403.11848). 
+This is the official repository of [**S2R-Bench**](https://arxiv.org). 
 
 <div align=center>
 <img src="./imgs/video.gif"  width="600" height="300"/>
