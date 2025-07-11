@@ -3,7 +3,7 @@
 </p>
 <div align="center">   
 
-  # S2R-Bench: A Sim-to-real Evaluation Benchmark for Autonomous Driving 
+  # S2R-Bench: A Sim-to-Real Evaluation Benchmark for Autonomous Driving 
 </div> 
 
 <div align="justify">  
@@ -18,11 +18,13 @@ This is the official repository of [**S2R-Bench**](https://arxiv.org).
 </div>
 
 # News
-<strong>[2024.12.31]  Our code and data are still being maintained and will be released soon.</strong> 
+<strong>[2025.6.15]  Our Paper has been submitted to Nature Portfolio journal !</strong>
+
+[2024.12.31]  Our code and data has been maintained and will be released soon ! 
 
 # 1. Introduction
 <p style=""text-align:justify; text-justify:interideograph;">
-The SimRW were conducted from 13 December 2023 to 18 December 2023 in Beijing, China. We specially select a variety of road conditions such as city roads, suburban roads, motorways, tunnels, towns, villages, communities, campuses, etc., covering roads covering about 700 km. In addition, we collect data during daytime and nighttime separately to ensure data diversity and84provide a benchmark for in-depth study of sensor anomalies in real-world scenarios.
+The S2R-Bench were conducted during December 2023 in Beijing, China. We specially select a variety of road conditions such as city roads, suburban roads, motorways, tunnels, towns, villages, communities, campuses, etc., covering roads covering about 700 km. In addition, we collect data during daytime and nighttime separately to ensure data diversity and84provide a benchmark for in-depth study of sensor anomalies in real-world scenarios.
 </p>
 
 ### Sensor Configuration 
@@ -30,9 +32,12 @@ The SimRW were conducted from 13 December 2023 to 18 December 2023 in Beijing, C
 The configuration of our ego vehicle and the coordinate relationships between the multiple sensors are shown in Fig. 1 (a). The ego vehicle system platform consists of a high-resolution camera, an 80-line LiDAR, and two types of 4D radar. The sensor configurations are detailed in Table 1.
 
 <div align=center>
-<img src="./imgs/system.png"  width="600" height="500"/>
+<img src="./imgs/main.png"  width="600" height="500"/>
 </div>
-<p align="center"><font face="Helvetica" size=3.><b>Figure 2. Sensor Configuration and Coordinate Systems</b></font></p>
+<p align="center"><font face="Helvetica" size=3.><b>Figure 2. The configuration of our experiment platform and visualisation scenarios.</b> (a) Shows the self-driving car system as well as the real anomaly data
+collected and the simulated anomaly data. (b) shows the statistics of the number of frames for various periods in different scenarios. (c) shows the statistics
+of the number of objects in different labels. The result suggests that the main labels like Car, Pedestrian, and Cyclist take up over three-quarters of the total
+amount of objects.</font></p>
 
 
 * The LiDAR sensor has an accuracy of 0.2° in azimuth and 0.2° in elevation. It collects data in a 360° horizontal field of view and a 40° vertical field of view. Since we are only concerned with the range in front of the vehicle, we retain data within a 120° field of view for labeling purposes. The Occuli radar sensor, when in long-range mode,78captures data within a 113° horizontal and 25° vertical field of view. The Arbe Phoenix radar, in middle-range mode, collects data within a 30° vertical field of view. The detailed specifications of the sensors are provided in Table 1. 
@@ -41,6 +46,12 @@ The configuration of our ego vehicle and the coordinate relationships between th
 <img src="./imgs/sensors.png"  width="850" height="178"/>
 </div>
 <p align="center"><font face="Helvetica" size=3.><b>Table 1. The configuration of the autonomous vehicle system platform</b></font></p>
+
+<div align=center>
+<img src="./imgs/cab.png"  width="850" height="478"/>
+</div>
+<p align="center"><font face="Helvetica" size=3.><b>Figure 3. Projection visualization of sensor calibration. (a), (b), (c), and (d) represent the projection of the calibrated data (3D bounding box, LiDAR point
+cloud, Arbe Phoenix point cloud, and Oculli-Eagle point cloud) on the image.</b></font></p>
 
 # 2. Data Acquisition Scenario
 
@@ -146,11 +157,11 @@ projection of 3D annotation boxes in images, LiDAR point clouds, Arbe Phoenix an
 
 * The calib.txt contains tree parts. The dataset consists of two parts: the data part and the alignment calibration file. The data part is image data in png format and point cloud data in bin format. The alignment calibration file includes calibration parameters for the four sensors. The camera-LiDAR, camera-4D radar joint calibration are shown here as examples for illustration.
 ```
-   SinRW_cam.Intrinsics.RadialDistortion: Barrel distortion of Dual Radar_cam [ k1, k2, k3 ]
-   SinRW_cam.Intrinsics.TangentialDistortion: radial distortion of Dual Radar_cam [ p1, p2 ]
-   SinRW_cam.IntrinsicMatrix: Dual Radar_cam's intrinsic matrix [ af, 0, 0; 0, bf, 0; u, v, 1]
-   SinRW_LiDAR-->Dual Radar_cam: Dual Radar_lidar to Dual Radar cam's single response matrix P(4×4)
-   SinRW_radar--> Dual Radar_cam: Dual Radar_radar to Dual Radar_cam rotation matrix + translation matrix P(3×4)
+   S2R-Bench_cam.Intrinsics.RadialDistortion: Barrel distortion of Dual Radar_cam [ k1, k2, k3 ]
+   S2R-Bench_cam.Intrinsics.TangentialDistortion: radial distortion of Dual Radar_cam [ p1, p2 ]
+   S2R-Bench_cam.IntrinsicMatrix: Dual Radar_cam's intrinsic matrix [ af, 0, 0; 0, bf, 0; u, v, 1]
+   S2R-Bench_LiDAR-->Dual Radar_cam: Dual Radar_lidar to Dual Radar cam's single response matrix P(4×4)
+   S2R-Bench_radar--> Dual Radar_cam: Dual Radar_radar to Dual Radar_cam rotation matrix + translation matrix P(3×4)
 ```
 # 5. Label Files Discription
 * <b>All values (numerical or strings) are separated via spaces, each row corresponds to one object. The 19 columns represent:</b>
@@ -247,8 +258,29 @@ python demo.py --cfg_file ${CONFIG_FILE} \
     --ckpt ${CKPT} \
     --data_path ${POINT_CLOUD_DATA}
 ```
+# 8. Results
+<div align=left>
+<img src="./imgs/ex1.png"/>
+</div>
+<p  align="left">THE COMPARISON OF THE “CAR” CATEGORY WITH THE POINTPILLARS MODEL AT MEDIUM DIFFICULTY USING "S2R-C".</p>
 
-# 8. Model Zoo
+<div align=left>
+<img src="./imgs/ex2.png"/>
+</div>
+<p  align="left">THE COMPARISON OF THE “CAR” CATEGORY WITH THE SMOKE MODEL AT MEDIUM DIFFICULTY USING “S2R-C”.</p>
+
+<div align=left>
+<img src="./imgs/ex3.png"/>
+</div>
+<p  align="left">THE COMPARISON OF THE “CAR” CATEGORY WITH THE FOCALS CONV MODEL AT MEDIUM DIFFICULTY USING S2R-C.</p>
+
+
+<div align=left>
+<img src="./imgs/ex4.png"/>
+</div>
+<p  align="left">THE COMPARISON OF THE “CAR” CATEGORY WITH THE POINTPILLARS MODEL AT MEDIUM DIFFICULTY USING SIMULATED-DATASET.</p>
+
+# 9. Model Zoo
 
 <table>
 
@@ -484,3 +516,14 @@ python demo.py --cfg_file ${CONFIG_FILE} \
 # 9. Acknowledgement
 * Thanks for the sensor support provided by Beijing Jingwei Hirain Technologies Co., Inc.
 # 10. Citation
+```
+@misc{wang2025s2rbenchsimtorealevaluationbenchmark,
+      title={S2R-Bench: A Sim-to-Real Evaluation Benchmark for Autonomous Driving}, 
+      author={Li Wang and Guangqi Yang and Lei Yang and Ziying Song and Xinyu Zhang and Ying Chen and Lin Liu and Junjie Gao and Zhiwei Li and Qingshan Yang and Jun Li and Liangliang Wang and Wenhao Yu and Bin Xu and Weida Wang and Huaping Liu},
+      year={2025},
+      eprint={2505.18631},
+      archivePrefix={arXiv},
+      primaryClass={cs.RO},
+      url={https://arxiv.org/abs/2505.18631}, 
+}
+```
