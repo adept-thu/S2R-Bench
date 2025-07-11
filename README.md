@@ -260,12 +260,12 @@ python demo.py --cfg_file ${CONFIG_FILE} \
 ```
 # 8. Results
 <div align=left>
-<img src="./imgs/ex1.png"/>
+<img src="./imgs/ex1.PNG"/>
 </div>
 <p  align="left">THE COMPARISON OF THE “CAR” CATEGORY WITH THE POINTPILLARS MODEL AT MEDIUM DIFFICULTY USING "S2R-C".</p>
 
 <div align=left>
-<img src="./imgs/ex2.png"/>
+<img src="./imgs/ex2.PNG"/>
 </div>
 <p  align="left">THE COMPARISON OF THE “CAR” CATEGORY WITH THE SMOKE MODEL AT MEDIUM DIFFICULTY USING “S2R-C”.</p>
 
